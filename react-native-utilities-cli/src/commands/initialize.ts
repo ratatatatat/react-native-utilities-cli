@@ -28,9 +28,9 @@ export default class Initialize extends Command {
         // Add your command logic here
         const { args, flags } = await this.parse(Initialize);
         const { directory } = args;
-        // createScaffolding(directory);
-        // setupRedux(directory);
-        // installRedux(directory);
+        createScaffolding(directory);
+        setupRedux(directory);
+        installRedux(directory);
         await createApp(directory);
     }
 }
