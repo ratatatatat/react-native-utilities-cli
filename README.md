@@ -18,7 +18,7 @@ $ npm install -g react-native-utilities-cli
 $ react-native-utilities-cli COMMAND
 running command...
 $ react-native-utilities-cli (--version)
-react-native-utilities-cli/0.0.1 darwin-x64 node-v20.10.0
+react-native-utilities-cli/0.0.2 darwin-x64 node-v20.10.0
 $ react-native-utilities-cli --help [COMMAND]
 USAGE
   $ react-native-utilities-cli COMMAND
@@ -63,7 +63,7 @@ EXAMPLES
   $ oex initialize
 ```
 
-_See code: [src/commands/add/component.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.1/src/commands/add/component.ts)_
+_See code: [src/commands/add/component.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.2/src/commands/add/component.ts)_
 
 ## `react-native-utilities-cli help [COMMANDS]`
 
@@ -106,7 +106,7 @@ EXAMPLES
   $ oex initialize
 ```
 
-_See code: [src/commands/initialize.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.1/src/commands/initialize.ts)_
+_See code: [src/commands/initialize.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.2/src/commands/initialize.ts)_
 
 ## `react-native-utilities-cli plugins`
 
