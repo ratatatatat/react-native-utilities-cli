@@ -18,7 +18,7 @@ $ npm install -g react-native-utilities-cli
 $ react-native-utilities-cli COMMAND
 running command...
 $ react-native-utilities-cli (--version)
-react-native-utilities-cli/0.0.0 darwin-x64 node-v20.10.0
+react-native-utilities-cli/0.0.1 darwin-x64 node-v20.10.0
 $ react-native-utilities-cli --help [COMMAND]
 USAGE
   $ react-native-utilities-cli COMMAND
@@ -27,9 +27,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`react-native-utilities-cli hello PERSON`](#react-native-utilities-cli-hello-person)
-* [`react-native-utilities-cli hello world`](#react-native-utilities-cli-hello-world)
+* [`react-native-utilities-cli add component DIRECTORY COMPONENTNAME`](#react-native-utilities-cli-add-component-directory-componentname)
 * [`react-native-utilities-cli help [COMMANDS]`](#react-native-utilities-cli-help-commands)
+* [`react-native-utilities-cli initialize DIRECTORY`](#react-native-utilities-cli-initialize-directory)
 * [`react-native-utilities-cli plugins`](#react-native-utilities-cli-plugins)
 * [`react-native-utilities-cli plugins:install PLUGIN...`](#react-native-utilities-cli-pluginsinstall-plugin)
 * [`react-native-utilities-cli plugins:inspect PLUGIN...`](#react-native-utilities-cli-pluginsinspect-plugin)
@@ -41,47 +41,29 @@ USAGE
 * [`react-native-utilities-cli plugins:uninstall PLUGIN...`](#react-native-utilities-cli-pluginsuninstall-plugin-2)
 * [`react-native-utilities-cli plugins update`](#react-native-utilities-cli-plugins-update)
 
-## `react-native-utilities-cli hello PERSON`
+## `react-native-utilities-cli add component DIRECTORY COMPONENTNAME`
 
-Say hello
+Create a component with some boilerplate
 
 ```
 USAGE
-  $ react-native-utilities-cli hello PERSON -f <value>
+  $ react-native-utilities-cli add component DIRECTORY COMPONENTNAME [-h]
 
 ARGUMENTS
-  PERSON  Person to say hello to
+  DIRECTORY      Fullpath to react-native project directory.
+  COMPONENTNAME  Name of the component to create.
 
 FLAGS
-  -f, --from=<value>  (required) Who is saying hello
+  -h, --help  Show CLI help.
 
 DESCRIPTION
-  Say hello
+  Create a component with some boilerplate
 
 EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  $ oex initialize
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.0/src/commands/hello/index.ts)_
-
-## `react-native-utilities-cli hello world`
-
-Say hello world
-
-```
-USAGE
-  $ react-native-utilities-cli hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ react-native-utilities-cli hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [src/commands/hello/world.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.0/src/commands/hello/world.ts)_
+_See code: [src/commands/add/component.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.1/src/commands/add/component.ts)_
 
 ## `react-native-utilities-cli help [COMMANDS]`
 
@@ -102,6 +84,29 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.20/src/commands/help.ts)_
+
+## `react-native-utilities-cli initialize DIRECTORY`
+
+Initialize the project, by adding baseline screens, navigation and redux stores for the screens.
+
+```
+USAGE
+  $ react-native-utilities-cli initialize DIRECTORY [-h]
+
+ARGUMENTS
+  DIRECTORY  Fullpath to react-native project directory.
+
+FLAGS
+  -h, --help  Show CLI help.
+
+DESCRIPTION
+  Initialize the project, by adding baseline screens, navigation and redux stores for the screens.
+
+EXAMPLES
+  $ oex initialize
+```
+
+_See code: [src/commands/initialize.ts](https://github.com/ratatatatat/react-native-utilities-cli/blob/v0.0.1/src/commands/initialize.ts)_
 
 ## `react-native-utilities-cli plugins`
 
