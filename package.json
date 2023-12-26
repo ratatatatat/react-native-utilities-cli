@@ -44,9 +44,7 @@
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
-      "@oclif/plugin-plugins",
-      "@oclif/plugin-update",
-      "@oclif/plugin-autocomplete"
+      "@oclif/plugin-update"
     ],
     "topicSeparator": " ",
     "topics": {
@@ -66,7 +64,7 @@
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bugs": "https://github.com/ratatatatat/react-native-utilities-cli/issues",
   "keywords": [
     "oclif"
