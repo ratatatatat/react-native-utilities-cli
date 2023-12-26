@@ -176,3 +176,4 @@ export default ${screen};
 const getRouteFileContent = (screen: string): string => {
     return `export const ${screen}Route = "${screen.toUpperCase()}";`;
 }
+

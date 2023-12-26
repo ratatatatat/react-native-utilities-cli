@@ -2,6 +2,39 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as child_process from 'child_process';
 
+export const createComponent = async (baseDir: string, componentName: string) => {
+    const fullPath = path.join(baseDir, `./src/components/${componentName}.tsx`);
+    const content = getComponentContent(componentName);
+    fs.writeFileSync(fullPath, content, { encoding: 'utf-8' });
+}
+
+const getComponentContent = (componentName: string): string => {
+    return `import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+    container: {
+    },
+});
+
+interface ${componentName}Props {
+}
+
+const ${componentName} = (props: ${componentName}Props) => {
+    return (
+        <View
+            style={styles.container}
+        >
+            <Text>${componentName}</Text>
+        </View>
+    );
+};
+
+export default ${componentName};
+
+`;
+}
+
 export const createScaffolding = (baseDir: string) => {
     const directories = [
         './src',
